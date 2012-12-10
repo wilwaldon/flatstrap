@@ -20,7 +20,6 @@
   > .item {
     display: none;
     position: relative;
-    .transition(.6s ease-in-out left);
   }
 
   // Account for jankitude on images
@@ -81,7 +80,7 @@
   text-align: center;
   background: @grayDarker;
   border: 3px solid @white;
-  .border-radius(23px);
+ .border-radius(0);
   .opacity(50);
 
   // we can't have this transition here
@@ -89,7 +88,6 @@
   // animation if you trip this while
   // in the middle of another animation
   // ;_;
-  // .transition(opacity .2s linear);
 
   // Reposition the right one
   &.right {
