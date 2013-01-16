@@ -219,6 +219,9 @@ a:hover {
   color: #005580;
   text-decoration: underline;
 }
+.img-rounded {
+  border-radius: 100%;
+}
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
@@ -227,6 +230,9 @@ a:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+.img-circle {
+  border-radius: 3%;
 }
 .row {
   margin-left: -20px;
