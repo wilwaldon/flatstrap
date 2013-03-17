@@ -34,7 +34,6 @@
 // Float them, remove border radius, then re-add to first and last elements
 .btn-group > .btn {
   position: relative;
-//.border-radius(0);
 }
 .btn-group > .btn + .btn {
   margin-left: -1px;
@@ -59,25 +58,10 @@
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group > .btn:first-child {
   margin-left: 0;
-  .border-top-left-radius(@baseBorderRadius);
-  .border-bottom-left-radius(@baseBorderRadius);
-}
-// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
-.btn-group > .btn:last-child,
-.btn-group > .dropdown-toggle {
-  .border-top-right-radius(@baseBorderRadius);
-  .border-bottom-right-radius(@baseBorderRadius);
 }
 // Reset corners for large buttons
 .btn-group > .btn.large:first-child {
   margin-left: 0;
-  .border-top-left-radius(@borderRadiusLarge);
-  .border-bottom-left-radius(@borderRadiusLarge);
-}
-.btn-group > .btn.large:last-child,
-.btn-group > .large.dropdown-toggle {
-  .border-top-right-radius(@borderRadiusLarge);
-  .border-bottom-right-radius(@borderRadiusLarge);
 }
 
 // On hover/focus/active, bring the proper btn to front
@@ -103,7 +87,7 @@
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
- .box-shadow(none);
+  .box-shadow(~"inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
   *padding-top: 5px;
   *padding-bottom: 5px;
 }
@@ -130,7 +114,6 @@
   // Remove the gradient and set the same inset shadow as the :active state
   .dropdown-toggle {
     background-image: none;
-   .box-shadow(none);
   }
 
   // Keep the hover's background when dropdown is open
@@ -164,8 +147,6 @@
   margin-left: 0;
 }
 // Carets in other button sizes
-.btn-mini .caret,
-.btn-small .caret,
 .btn-large .caret {
   margin-top: 6px;
 }
@@ -173,6 +154,10 @@
   border-left-width:  5px;
   border-right-width: 5px;
   border-top-width:   5px;
+}
+.btn-mini .caret,
+.btn-small .caret {
+  margin-top: 8px;
 }
 // Upside down carets for .dropup
 .dropup .btn-large .caret {
@@ -207,21 +192,8 @@
   display: block;
   float: none;
   max-width: 100%;
-//.border-radius(0);
 }
 .btn-group-vertical > .btn + .btn {
   margin-left: 0;
   margin-top: -1px;
-}
-.btn-group-vertical > .btn:first-child {
-//.border-radius(0);
-}
-.btn-group-vertical > .btn:last-child {
-//.border-radius(0);
-}
-.btn-group-vertical > .btn-large:first-child {
-//.border-radius(0);
-}
-.btn-group-vertical > .btn-large:last-child {
-//.border-radius(0);
 }

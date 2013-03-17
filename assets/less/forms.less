@@ -85,7 +85,6 @@ input[type="color"],
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   color: @gray;
-//.border-radius(0);
   vertical-align: middle;
 }
 
@@ -119,14 +118,13 @@ input[type="color"],
 .uneditable-input {
   background-color: @inputBackground;
   border: 1px solid @inputBorder;
- .box-shadow(none);
+  .transition(~"border linear .2s, box-shadow linear .2s");
 
   // Focus state
   &:focus {
     border-color: rgba(82,168,236,.8);
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-   .box-shadow(none);
   }
 }
 
@@ -189,7 +187,6 @@ input[type="checkbox"]:focus {
   color: @grayLight;
   background-color: darken(@inputBackground, 1%);
   border-color: @inputBorder;
- .box-shadow(none);
   cursor: not-allowed;
 }
 
@@ -373,7 +370,6 @@ select:focus:invalid {
   &:focus {
     border-color: darken(#ee5f5b, 10%);
     @shadow: 0 0 6px lighten(#ee5f5b, 20%);
-   .box-shadow(none);
   }
 }
 
@@ -421,7 +417,9 @@ select:focus:invalid {
 // Allow us to put symbols and text within the input field for a cleaner look
 .input-append,
 .input-prepend {
-  margin-bottom: 5px;
+  display: inline-block;
+  margin-bottom: @baseLineHeight / 2;
+  vertical-align: middle;
   font-size: 0; // white space collapse hack
   white-space: nowrap; // Prevent span and input from separating
 
@@ -429,7 +427,8 @@ select:focus:invalid {
   input,
   select,
   .uneditable-input,
-  .dropdown-menu {
+  .dropdown-menu,
+  .popover {
     font-size: @baseFontSize;
   }
 
@@ -440,7 +439,6 @@ select:focus:invalid {
     margin-bottom: 0; // prevent bottom margin from screwing up alignment in stacked forms
     *margin-left: 0;
     vertical-align: top;
-  //.border-radius(0);
     // Make input on top when focused so blue border and shadow always show
     &:focus {
       z-index: 2;
@@ -464,7 +462,6 @@ select:focus:invalid {
   .btn,
   .btn-group > .dropdown-toggle {
     vertical-align: top;
-  //.border-radius(0);
   }
   .active {
     background-color: lighten(@green, 30);
@@ -477,53 +474,25 @@ select:focus:invalid {
   .btn {
     margin-right: -1px;
   }
-  .add-on:first-child,
-  .btn:first-child {
-    // FYI, `.btn:first-child` accounts for a button group that's prepended
-  //.border-radius(0);
-  }
 }
 
 .input-append {
-  input,
-  select,
-  .uneditable-input {
-  //.border-radius(0);
-    + .btn-group .btn:last-child {
-    //.border-radius(0);
-    }
-  }
   .add-on,
   .btn,
   .btn-group {
     margin-left: -1px;
   }
-  .add-on:last-child,
-  .btn:last-child,
-  .btn-group:last-child > .dropdown-toggle {
-  //.border-radius(0);
-  }
 }
 
 // Remove all border-radius for inputs with both prepend and append
 .input-prepend.input-append {
-  input,
-  select,
-  .uneditable-input {
-  //.border-radius(0);
-    + .btn-group .btn {
-    //.border-radius(0);
-    }
-  }
   .add-on:first-child,
   .btn:first-child {
     margin-right: -1px;
-  //.border-radius(0);
   }
   .add-on:last-child,
   .btn:last-child {
     margin-left: -1px;
-  //.border-radius(0);
   }
   .btn-group:first-child {
     margin-left: 0;
@@ -542,25 +511,6 @@ input.search-query {
   padding-left: 14px;
   padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
   margin-bottom: 0; // Remove the default margin on all inputs
-//.border-radius(0);
-}
-
-/* Allow for input prepend/append in search forms */
-.form-search .input-append .search-query,
-.form-search .input-prepend .search-query {
-//.border-radius(0); // Override due to specificity
-}
-.form-search .input-append .search-query {
-//.border-radius(0);
-}
-.form-search .input-append .btn {
-//.border-radius(0);
-}
-.form-search .input-prepend .search-query {
-//.border-radius(0);
-}
-.form-search .input-prepend .btn {
-//.border-radius(0);
 }
 
 
