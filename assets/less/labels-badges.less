@@ -17,14 +17,10 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   background-color: @grayLight;
 }
-// Set unique padding and border-radii
-.label {
-//.border-radius(0);
-}
+
 .badge {
   padding-left: 9px;
   padding-right: 9px;
-//.border-radius(0);
 }
 
 // Empty labels/badges collapse
@@ -35,10 +31,12 @@
   }
 }
 
-// Hover state, but only for links
+// Hover/focus state, but only for links
 a {
   &.label:hover,
-  &.badge:hover {
+  &.label:focus,
+  &.badge:hover,
+  &.badge:focus {
     color: @white;
     text-decoration: none;
     cursor: pointer;

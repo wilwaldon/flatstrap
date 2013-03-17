@@ -7,16 +7,6 @@
   position: relative;
   margin-bottom: @baseLineHeight;
   line-height: 1;
-
-  // Transition for sliding
-  // -----------------------------
-  &.slide {
-    .carousel-inner {
-      > .item {
-        .transition(.6s ease-in-out left);
-      }
-    }
-  }
 }
 
 .carousel-inner {
@@ -30,12 +20,14 @@
   > .item {
     display: none;
     position: relative;
-  }
+    .transition(.6s ease-in-out left);
 
-  // Account for jankitude on images
-  > .item > img {
-    display: block;
-    line-height: 1;
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      display: block;
+      line-height: 1;
+    }
   }
 
   > .active,
@@ -90,7 +82,6 @@
   text-align: center;
   background: @grayDarker;
   border: 3px solid @white;
-//.border-radius(0);
   .opacity(50);
 
   // we can't have this transition here
@@ -98,6 +89,7 @@
   // animation if you trip this while
   // in the middle of another animation
   // ;_;
+  // .transition(opacity .2s linear);
 
   // Reposition the right one
   &.right {
@@ -105,14 +97,39 @@
     right: 15px;
   }
 
-  // Hover state
-  &:hover {
+  // Hover/focus state
+  &:hover,
+  &:focus {
     color: @white;
     text-decoration: none;
     .opacity(90);
   }
 }
 
+// Carousel indicator pips
+// -----------------------------
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    text-indent: -999px;
+    background-color: #ccc;
+    background-color: rgba(255,255,255,.25);
+  }
+  .active {
+    background-color: #fff;
+  }
+}
 
 // Caption for text below images
 // -----------------------------
