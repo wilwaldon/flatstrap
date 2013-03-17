@@ -29,13 +29,12 @@
   padding: 4px;
   line-height: @baseLineHeight;
   border: 1px solid #ddd;
-//.border-radius(0);
- .box-shadow(none);
+  .transition(all .2s ease-in-out);
 }
-// Add a hover state for linked versions only
-a.thumbnail:hover {
+// Add a hover/focus state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus {
   border-color: @linkColor;
- .box-shadow(none);
 }
 
 // Images and captions
