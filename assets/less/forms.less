@@ -11,6 +11,12 @@ form {
   margin: 0 0 @baseLineHeight;
 }
 
+/* insure no borders on mobile safari */
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 fieldset {
   padding: 0;
   margin: 0;
