@@ -12,8 +12,12 @@ form {
 }
 
 /* insure no borders on mobile safari */
-input {
-    -webkit-appearance: none;
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    border-radius: 0;
+}
+input[type="radio"] {
+    -webkit-appearance: radio;
     border-radius: 0;
 }
 
