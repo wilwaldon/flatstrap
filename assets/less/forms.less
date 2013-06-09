@@ -11,16 +11,6 @@ form {
   margin: 0 0 @baseLineHeight;
 }
 
-/* insure no borders on mobile safari */
-input[type="checkbox"] {
-    -webkit-appearance: checkbox;
-    border-radius: 0;
-}
-input[type="radio"] {
-    -webkit-appearance: radio;
-    border-radius: 0;
-}
-
 fieldset {
   padding: 0;
   margin: 0;
@@ -379,7 +369,6 @@ select:focus:invalid {
   border-color: #ee5f5b;
   &:focus {
     border-color: darken(#ee5f5b, 10%);
-    @shadow: 0 0 6px lighten(#ee5f5b, 20%);
   }
 }
 
@@ -464,7 +453,6 @@ select:focus:invalid {
     font-weight: normal;
     line-height: @baseLineHeight;
     text-align: center;
-    text-shadow: 0 1px 0 @white;
     background-color: @grayLighter;
     border: 1px solid #ccc;
   }
@@ -487,6 +475,8 @@ select:focus:invalid {
 }
 
 .input-append {
+  input,
+  select,
   .add-on,
   .btn,
   .btn-group {
@@ -496,6 +486,8 @@ select:focus:invalid {
 
 // Remove all border-radius for inputs with both prepend and append
 .input-prepend.input-append {
+  input,
+  select,
   .add-on:first-child,
   .btn:first-child {
     margin-right: -1px;
@@ -522,6 +514,8 @@ input.search-query {
   padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
   margin-bottom: 0; // Remove the default margin on all inputs
 }
+
+/* Allow for input prepend/append in search forms */
 
 
 
