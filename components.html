@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Components · Flat Strap</title>
+    <title>Components · Flatstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -15,16 +15,26 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
 
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-146052-10']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -39,7 +49,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Flat Strap</a>
+          <a class="brand" href="./index.html">Flatstrap</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -59,6 +69,9 @@
               </li>
               <li class="">
                 <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">Customize</a>
               </li>
             </ul>
           </div>
@@ -160,14 +173,33 @@
 &lt;/ul&gt;
 </pre>
 
+          <h3>Disabled menu options</h3>
+          <p>Add <code>.disabled</code> to a <code>&lt;li&gt;</code> in the dropdown to disable the link.</p>
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">Regular link</a></li>
+                <li class="disabled"><a tabindex="-1" href="#">Disabled link</a></li>
+                <li><a tabindex="-1" href="#">Another link</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
           <h3>Sub menus on dropdowns</h3>
           <p>Add an extra level of dropdown menus, appearing on hover like those of OS X, with some simple markup additions. Add <code>.dropdown-submenu</code> to any <code>li</code> in an existing dropdown menu for automatic styling.</p>
-          <div class="bs-docs-example" style="min-height: 180px;">
+          <div class="bs-docs-example bs-docs-example-submenus">
 
             <div class="pull-left">
               <p class="muted">Default</p>
               <div class="dropdown clearfix">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a tabindex="-1" href="#">Action</a></li>
                   <li><a tabindex="-1" href="#">Another action</a></li>
                   <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -186,10 +218,10 @@
               </div>
             </div>
 
-            <div class="pull-left" style="margin-left: 20px;">
+            <div class="pull-left">
               <p class="muted">Dropup</p>
               <div class="dropup">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a tabindex="-1" href="#">Action</a></li>
                   <li><a tabindex="-1" href="#">Another action</a></li>
                   <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -208,10 +240,10 @@
               </div>
             </div>
 
-            <div class="pull-left" style="margin-left: 20px;">
+            <div class="pull-left">
               <p class="muted">Left submenu</p>
               <div class="dropdown">
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                   <li><a tabindex="-1" href="#">Action</a></li>
                   <li><a tabindex="-1" href="#">Another action</a></li>
                   <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -269,9 +301,9 @@
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
-  &lt;button class="btn"&gt;1&lt;/button&gt;
-  &lt;button class="btn"&gt;2&lt;/button&gt;
-  &lt;button class="btn"&gt;3&lt;/button&gt;
+  &lt;button class="btn"&gt;Left&lt;/button&gt;
+  &lt;button class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn"&gt;Right&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1493,6 +1525,7 @@
     &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
@@ -1522,7 +1555,7 @@
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
   &lt;ul&gt;
-    &lt;li class="disabled"&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
     &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
     ...
   &lt;/ul&gt;
@@ -1532,7 +1565,7 @@
 <pre class="prettyprint linenums">
 &lt;div class="pagination"&gt;
   &lt;ul&gt;
-    &lt;li class="disabled"&gt;&lt;span&gt;Prev&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
     &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
     ...
   &lt;/ul&gt;
@@ -1856,6 +1889,9 @@
             </tbody>
           </table>
 
+          <h3>Easily collapsible</h3>
+          <p>For easy implementation, labels and badges will simply collapse (via CSS's <code>:empty</code> selector) when no content exists within.</p>
+
         </section>
 
 
@@ -1918,22 +1954,22 @@
             <ul class="thumbnails">
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
               <li class="span3">
                 <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/260x180" alt="">
+                  <img data-src="holder.js/260x180" alt="">
                 </a>
               </li>
             </ul>
@@ -1945,7 +1981,7 @@
             <ul class="thumbnails">
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
+                  <img data-src="holder.js/300x200" alt="">
                   <div class="caption">
                     <h3>Thumbnail label</h3>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1955,7 +1991,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
+                  <img data-src="holder.js/300x200" alt="">
                   <div class="caption">
                     <h3>Thumbnail label</h3>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1965,7 +2001,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="http://placehold.it/300x200" alt="">
+                  <img data-src="holder.js/300x200" alt="">
                   <div class="caption">
                     <h3>Thumbnail label</h3>
                     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1991,7 +2027,7 @@
 &lt;ul class="thumbnails"&gt;
   &lt;li class="span4"&gt;
     &lt;a href="#" class="thumbnail"&gt;
-      &lt;img src="http://placehold.it/300x200" alt=""&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
     &lt;/a&gt;
   &lt;/li&gt;
   ...
@@ -2002,7 +2038,7 @@
 &lt;ul class="thumbnails"&gt;
   &lt;li class="span4"&gt;
     &lt;div class="thumbnail"&gt;
-      &lt;img src="http://placehold.it/300x200" alt=""&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
       &lt;h3&gt;Thumbnail label&lt;/h3&gt;
       &lt;p&gt;Thumbnail caption...&lt;/p&gt;
     &lt;/div&gt;
@@ -2016,27 +2052,27 @@
           <ul class="thumbnails">
             <li class="span4">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/360x270" alt="">
+                <img data-src="holder.js/360x270" alt="">
               </a>
             </li>
             <li class="span3">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/260x120" alt="">
+                <img data-src="holder.js/260x120" alt="">
               </a>
             </li>
             <li class="span2">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/160x120" alt="">
+                <img data-src="holder.js/160x120" alt="">
               </a>
             </li>
             <li class="span3">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/260x120" alt="">
+                <img data-src="holder.js/260x120" alt="">
               </a>
             </li>
             <li class="span2">
               <a href="#" class="thumbnail">
-                <img src="http://placehold.it/160x120" alt="">
+                <img data-src="holder.js/160x120" alt="">
               </a>
             </li>
           </ul>
@@ -2063,16 +2099,16 @@
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
   &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
 &lt;/div&gt;
 </pre>
 
           <h3>Dismiss buttons</h3>
           <p>Mobile Safari and Mobile Opera browsers, in addition to the <code>data-dismiss="alert"</code> attribute, require an <code>href="#"</code> for the dismissal of alerts when using an <code>&lt;a&gt;</code> tag.</p>
-          <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;</pre>
+          <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/a&gt;</pre>
           <p>Alternatively, you may use a <code>&lt;button&gt;</code> element with the data attribute, which we have opted to do for our docs. When using <code>&lt;button&gt;</code>, you must include <code>type="button"</code> or your forms may not submit.</p>
-          <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
+          <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;</pre>
 
           <h3>Dismiss alerts via JavaScript</h3>
           <p>Use the <a href="./javascript.html#alerts">alerts jQuery plugin</a> for quick and easy dismissal of alerts.</p>
@@ -2092,7 +2128,7 @@
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-block"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
   &lt;h4&gt;Warning!&lt;/h4&gt;
   Best check yo self, you're not...
 &lt;/div&gt;
@@ -2308,7 +2344,7 @@
           <div class="bs-docs-example">
             <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" src="http://placehold.it/64x64">
+                <img class="media-object" data-src="holder.js/64x64">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Media heading</h4>
@@ -2317,14 +2353,14 @@
             </div>
             <div class="media">
               <a class="pull-left" href="#">
-                <img class="media-object" src="http://placehold.it/64x64">
+                <img class="media-object" data-src="holder.js/64x64">
               </a>
               <div class="media-body">
                 <h4 class="media-heading">Media heading</h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 <div class="media">
                   <a class="pull-left" href="#">
-                    <img class="media-object" src="http://placehold.it/64x64">
+                    <img class="media-object" data-src="holder.js/64x64">
                   </a>
                   <div class="media-body">
                     <h4 class="media-heading">Media heading</h4>
@@ -2337,7 +2373,7 @@
 <pre class="prettyprint linenums">
 &lt;div class="media"&gt;
   &lt;a class="pull-left" href="#"&gt;
-    &lt;img class="media-object" src="http://placehold.it/64x64"&gt;
+    &lt;img class="media-object" data-src="holder.js/64x64"&gt;
   &lt;/a&gt;
   &lt;div class="media-body"&gt;
     &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
@@ -2361,7 +2397,7 @@
             <ul class="media-list">
               <li class="media">
                 <a class="pull-left" href="#">
-                  <img class="media-object" src="http://placehold.it/64x64">
+                  <img class="media-object" data-src="holder.js/64x64">
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading">Media heading</h4>
@@ -2369,7 +2405,7 @@
                   <!-- Nested media object -->
                   <div class="media">
                     <a class="pull-left" href="#">
-                      <img class="media-object" src="http://placehold.it/64x64">
+                      <img class="media-object" data-src="holder.js/64x64">
                     </a>
                     <div class="media-body">
                       <h4 class="media-heading">Nested media heading</h4>
@@ -2377,7 +2413,7 @@
                       <!-- Nested media object -->
                       <div class="media">
                         <a class="pull-left" href="#">
-                          <img class="media-object" src="http://placehold.it/64x64">
+                          <img class="media-object" data-src="holder.js/64x64">
                         </a>
                         <div class="media-body">
                           <h4 class="media-heading">Nested media heading</h4>
@@ -2389,7 +2425,7 @@
                   <!-- Nested media object -->
                   <div class="media">
                     <a class="pull-left" href="#">
-                      <img class="media-object" src="http://placehold.it/64x64">
+                      <img class="media-object" data-src="holder.js/64x64">
                     </a>
                     <div class="media-body">
                       <h4 class="media-heading">Nested media heading</h4>
@@ -2400,7 +2436,7 @@
               </li>
               <li class="media">
                 <a class="pull-right" href="#">
-                  <img class="media-object" src="http://placehold.it/64x64">
+                  <img class="media-object" data-src="holder.js/64x64">
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading">Media heading</h4>
@@ -2413,7 +2449,7 @@
 &lt;ul class="media-list"&gt;
   &lt;li class="media"&gt;
     &lt;a class="pull-left" href="#"&gt;
-      &lt;img class="media-object" src="http://placehold.it/64x64"&gt;
+      &lt;img class="media-object" data-src="holder.js/64x64"&gt;
     &lt;/a&gt;
     &lt;div class="media-body"&gt;
       &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
@@ -2482,7 +2518,7 @@
             <p><button class="close" style="float: none;">&times;</button></p>
           </div>
           <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
-          <p>iOS devices require an href="#" for click events if you would rather use an anchor.</p>
+          <p>iOS devices require an <code>href="#"</code> for click events if you would rather use an anchor.</p>
           <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
 
           <h2>Helper classes</h2>
@@ -2555,7 +2591,6 @@ class="clearfix"
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
         <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
         <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
@@ -2564,7 +2599,7 @@ class="clearfix"
           <li class="muted">&middot;</li>
           <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
         </ul>
       </div>
     </footer>
@@ -2576,7 +2611,6 @@ class="clearfix"
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -2590,21 +2624,28 @@ class="clearfix"
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
     <script src="assets/js/application.js"></script>
 
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-30702122-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    <!-- Analytics
+    ================================================== -->
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
 
   </body>
 </html>
