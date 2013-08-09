@@ -471,8 +471,11 @@ h2 + .row {
 
 .scrollspy-example {
   height: 200px;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
+}
+.scrollspy-example:hover {
+   overflow: auto;
 }
 
 
