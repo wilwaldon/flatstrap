@@ -24,7 +24,7 @@ Three quick start options are available:
 
 - [Download the latest release](https://github.com/littlesparkvt/flatstrap/archive/v3.1.1.zip).
 - Clone the repo: `git clone https://github.com/littlesparkvt/flatstrap.git`.
-- Install with [Bower](http://bower.io): `bower install bootstrap`.
+- Install with [Bower](http://bower.io): `bower install flatstrap`.
 
 Read the [Getting Started page](http://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.
 
