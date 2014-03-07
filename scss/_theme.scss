@@ -45,9 +45,9 @@
 .btn-default { @include btn-styles($btn-default-bg); }
 .btn-primary { @include btn-styles($btn-primary-bg); }
 .btn-success { @include btn-styles($btn-success-bg); }
+.btn-info    { @include btn-styles($btn-info-bg); }
 .btn-warning { @include btn-styles($btn-warning-bg); }
 .btn-danger  { @include btn-styles($btn-danger-bg); }
-.btn-info    { @include btn-styles($btn-info-bg); }
 
 
 
@@ -92,7 +92,7 @@
   .navbar-nav > .active > a {
     @include gradient-vertical($start-color: $navbar-inverse-bg, $end-color: lighten($navbar-inverse-bg, 2.5%));
   }
-}
+
 
 // Undo rounded corners in static and fixed navbars
 .navbar-static-top,

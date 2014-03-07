@@ -12,20 +12,26 @@ host:             0.0.0.0
 port:             9001
 baseurl:          /
 url:              http://localhost:9001
+encoding:         UTF-8
+
+exclude:
+  - "jade"
+  - "vendor"
 
 # Custom vars
-current_version:  3.0.3
+current_version:  3.1.1
 repo:             https://github.com/littlesparkvt/flatstrap
+sass_repo:        https://github.com/littlesparkvt/flatstrap
 
 download:
-  source:         https://github.com/littlesparkvt/flatstrap/archive/master.zip
-  dist:           https://github.com/littlesparkvt/flatstrap/releases/download/v3.0.3/bootstrap-3.0.3-dist.zip
+  source:         https://github.com/littlesparkvt/flatstrap/archive/v3.1.1.zip
+  dist:           https://github.com/littlesparkvt/flatstrap/archive/v3.1.1.zip
+  sass:           https://github.com/littlesparkvt/flatstrap/archive/v3.1.1.zip
 
-blog:             http://www.flatstrap.org/
+blog:             http://blog.getbootstrap.com
 expo:             http://expo.getbootstrap.com
-sass_repo:        https://github.com/twbs/bootstrap-sass
 
 cdn:
-  css:            //netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css
-  css_theme:      //netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css
-  js:             //netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js
+  css:            //netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
+  css_theme:      //netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css
+  js:             //netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js

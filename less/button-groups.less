@@ -96,9 +96,9 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-xs > .btn { .btn-xs(); }
-.btn-group-sm > .btn { .btn-sm(); }
-.btn-group-lg > .btn { .btn-lg(); }
+.btn-group-xs > .btn { &:extend(.btn-xs); }
+.btn-group-sm > .btn { &:extend(.btn-sm); }
+.btn-group-lg > .btn { &:extend(.btn-lg); }
 
 
 // Split button dropdowns
@@ -112,16 +112,6 @@
 .btn-group > .btn-lg + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
-}
-
-// The clickable button for toggling the menu
-// Remove the gradient and set the same inset shadow as the :active state
-.btn-group.open .dropdown-toggle {
-
-  // Show no shadow for `.btn-link` since it has no other button styles.
-  &.btn-link {
-    .box-shadow(none);
-  }
 }
 
 
