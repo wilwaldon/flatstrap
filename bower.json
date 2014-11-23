@@ -1,24 +1,40 @@
 {
   "name": "flatstrap",
-  "version": "3.1.1",
+  "description": "flat Bootstrap",
+  "version": "3.3.1",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "flat",
+    "flatstrap"
+  ],
+  "homepage": "http://zerox.me/projects/flatstrap",
   "main": [
-    "./dist/css/flatstrap.css",
-    "./dist/js/flatstrap.js",
-    "./dist/fonts/glyphicons-halflings-regular.eot",
-    "./dist/fonts/glyphicons-halflings-regular.svg",
-    "./dist/fonts/glyphicons-halflings-regular.ttf",
-    "./dist/fonts/glyphicons-halflings-regular.woff"
+    "less/flatstrap.less",
+    "dist/css/flatstrap.css",
+    "dist/js/flatstrap.js",
+    "dist/fonts/glyphicons-halflings-regular.eot",
+    "dist/fonts/glyphicons-halflings-regular.svg",
+    "dist/fonts/glyphicons-halflings-regular.ttf",
+    "dist/fonts/glyphicons-halflings-regular.woff"
   ],
   "ignore": [
-    "**/.*",
+    "/.*",
     "_config.yml",
     "CNAME",
     "composer.json",
     "CONTRIBUTING.md",
     "docs",
-    "js/tests"
+    "js/tests",
+    "test-infra"
   ],
   "dependencies": {
-    "jquery": "~2.1.0"
+    "jquery": ">= 1.9.1"
   }
 }

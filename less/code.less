@@ -17,7 +17,6 @@ code {
   font-size: 90%;
   color: @code-color;
   background-color: @code-bg;
-  white-space: nowrap;
   border-radius: @border-radius-base;
 }
 
@@ -28,6 +27,12 @@ kbd {
   color: @kbd-color;
   background-color: @kbd-bg;
   border-radius: @border-radius-small;
+
+  kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+  }
 }
 
 // Blocks of code

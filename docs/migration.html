@@ -6,7 +6,6 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
 ---
 
 
-
 <!-- Migration
 ================================================== -->
 <div class="bs-docs-section">
@@ -40,6 +39,10 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
         <tr>
           <td><code>.brand</code></td>
           <td><code>.navbar-brand</code></td>
+        </tr>
+        <tr>
+          <td><code>.navbar .nav</code></td>
+          <td><code>.navbar-nav</code></td>
         </tr>
         <tr>
           <td><code>.nav-collapse</code></td>
@@ -312,7 +315,6 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
     </table>
   </div><!-- /.table-responsive -->
 
-
   <h2 id="dropped">What's removed</h2>
   <p>The following elements have been dropped or changed in v3.0.</p>
   <div class="table-responsive">
@@ -410,10 +412,14 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
           <td><code>.help-inline</code></td>
           <td>No exact equivalent, but <code>.help-block</code> is similar.</td>
         </tr>
+        <tr>
+          <td>Non-bar-level progress colors</td>
+          <td><code>.progress-info</code> <code>.progress-success</code> <code>.progress-warning</code> <code>.progress-danger</code></td>
+          <td>Use <code>.progress-bar-*</code> on the <code>.progress-bar</code> instead.</td>
+        </tr>
       </tbody>
     </table>
   </div><!-- /.table-responsive -->
-
 
   <h2 id="notes">Additional notes</h2>
   <p>Other changes in v3.0 are not immediately apparent. Base classes, key styles, and behaviors have been adjusted for flexibility and our <em>mobile first</em> approach. Here's a partial list:</p>
@@ -428,6 +434,7 @@ lead: "Guidance on how to upgrade from Bootstrap v2.x to v3.x with emphasis on m
     <li>Typeahead has been dropped, in favor of using <a href="http://twitter.github.io/typeahead.js/">Twitter Typeahead</a>.</li>
     <li>Modal markup has changed significantly. The <code>.modal-header</code>, <code>.modal-body</code>, and <code>.modal-footer</code> sections are now wrapped in <code>.modal-content</code> and <code>.modal-dialog</code> for better mobile styling and behavior. Also, you should no longer apply <code>.hide</code> to <code>.modal</code> in your markup.</li>
     <li>As of v3.1.0, the HTML loaded by the <code>remote</code> modal option is now injected into the <code>.modal-content</code> (from v3.0.0 to v3.0.3, into the <code>.modal</code>) instead of into the <code>.modal-body</code>. This allows you to also easily vary the header and footer of the modal, not just the modal body.</li>
+    <li>The checkbox and radio features of the button.js plugin now both use <code>data-toggle="buttons"</code> instead of <code>data-toggle="buttons-checkbox"</code> or <code>data-toggle="buttons-radio"</code> in their markup.</li>
     <li>JavaScript events are namespaced. For example, to handle the modal "show" event, use <code>'show.bs.modal'</code>. For tabs "shown" use <code>'shown.bs.tab'</code>, etc.</li>
   </ul>
   <p>For more information on upgrading to v3.0, and code snippets from the community, see <a href="http://bootply.com/">Bootply</a>.</p>

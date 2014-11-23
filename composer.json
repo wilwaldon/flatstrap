@@ -1,8 +1,19 @@
 {
   "name": "flatstrap",
-  "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
-  "keywords": ["flatstrap", "bootstrap", "css"],
-  "homepage": "http://www.flatstrap.org",
+  "description": "flat Bootstrap",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "flat",
+    "flatstrap"
+  ],
+  "homepage": "http://zerox.me/projects/flatstrap",
   "authors": [
     {
       "name": "Mark Otto",
@@ -19,7 +30,10 @@
   "license": "MIT",
   "extra": {
     "branch-alias": {
-      "dev-master": "3.0.x-dev"
+      "dev-master": "3.3.x-dev"
     }
+  },
+  "replace": {
+    "twitter/bootstrap": "self.version"
   }
 }
