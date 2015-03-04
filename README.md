@@ -8,17 +8,21 @@ Flat version of Bootstrap
 To get started, check out <http://zerox.me/projects/flatstrap>!
 
 
-## Creators
+## Flatstrap Creators
 
 **William Waldon**
 
 - <https://github.com/wilwaldon>
 - <http://flatstrap.org>
 
+##Contributors
+
 **Zero**
 
 - <https://twitter.com/izer0x>
 - <https://github.com/izer0x>
+
+##Bootstrap Creators
 
 **Mark Otto**
 
