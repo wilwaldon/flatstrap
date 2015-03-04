@@ -3,12 +3,19 @@
 [![npm version](https://badge.fury.io/js/flatstrap.svg)](http://badge.fury.io/js/flatstrap)
 [![devDependency Status](https://david-dm.org/twbs/bootstrap/dev-status.svg)](https://david-dm.org/littlesparkvt/flatstrap#info=devDependencies)
 
-Flat version of Bootstrap
+First and foremost I'd like to thank everyone that has contributed and starred this project.
 
-To get started, check out <http://zerox.me/projects/flatstrap>!
+##NEWS
+
+**Development on the next version of Flatstrap has begun.
 
 
-## Flatstrap Creators
+##Flat version of Bootstrap
+
+**To get started with Flatstrap, check out <http://zerox.me/projects/flatstrap>!
+
+
+## Flatstrap Creator
 
 **William Waldon**
 
@@ -38,4 +45,4 @@ To get started, check out <http://zerox.me/projects/flatstrap>!
 
 Code and documentation copyright 2011-2014 Twitter, Inc. Code released under [the MIT license](LICENSE). Docs released under [Creative Commons](docs/LICENSE).
 
-Flatstrap was created by William Waldon. Lead contributor is Zero.
+Flatstrap was created by William Waldon. You are allowed to do whatever you want with the flatstrap code.
