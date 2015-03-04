@@ -15,7 +15,7 @@ To get started, check out <http://zerox.me/projects/flatstrap>!
 - <https://github.com/wilwaldon>
 - <http://flatstrap.org>
 
-##Contributors
+##Lead Contributors
 
 **Zero**
 
