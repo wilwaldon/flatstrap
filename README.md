@@ -13,8 +13,8 @@ To get started, check out <http://zerox.me/projects/flatstrap>!
 **William Waldon**
 
 - <https://github.com/wilwaldon>
-- <https://flatstrap.org>
-- 
+- <http://flatstrap.org>
+
 **Zero**
 
 - <https://twitter.com/izer0x>
