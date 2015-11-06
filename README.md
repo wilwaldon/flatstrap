@@ -20,7 +20,8 @@ First and foremost I'd like to thank everyone that has contributed and starred t
 **William Waldon**
 
 - <https://github.com/wilwaldon>
-- <http://flatstrap.org>
+- <http://www.wilwaldon.com>
+- <https://twitter.com/littlesparkvt>
 
 ##Lead Contributors
 
