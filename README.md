@@ -12,8 +12,6 @@ First and foremost I'd like to thank everyone that has contributed and starred t
 
 ##Flat version of Bootstrap
 
-**To get started with Flatstrap, check out <http://zerox.me/projects/flatstrap>!
-
 
 ## Flatstrap Creator
 
