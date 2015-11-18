@@ -25,8 +25,8 @@ First and foremost I'd like to thank everyone that has contributed and starred t
 
 **Zero**
 
-- <https://twitter.com/izer0x>
-- <https://github.com/izer0x>
+- <https://twitter.com/izer0xme>
+- <https://github.com/zeroxme>
 
 ##Bootstrap Creators
 
