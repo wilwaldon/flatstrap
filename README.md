@@ -17,8 +17,8 @@ First and foremost I'd like to thank everyone that has contributed and starred t
 
 **William Waldon**
 
-- <https://github.com/wilwaldon>
 - <http://www.wilwaldon.com>
+- <https://github.com/wilwaldon>
 - <https://twitter.com/littlesparkvt>
 
 ##Lead Contributors
