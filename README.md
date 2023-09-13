@@ -21,13 +21,6 @@ First and foremost I'd like to thank everyone that has contributed and starred t
 - <https://github.com/wilwaldon>
 - <https://twitter.com/littlesparkvt>
 
-##Lead Contributors
-
-**Zero**
-
-- <https://twitter.com/izer0xme>
-- <https://github.com/zeroxme>
-
 ##Bootstrap Creators
 
 **Mark Otto**
